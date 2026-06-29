@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="title">Prediction Result</h1>
+<p><strong>Disease:</strong> {{ disease }}</p>
+<p><strong>Confidence:</strong> {{ confidence }}%</p>
+<p><strong>Recommendation:</strong> {{ recommendation }}</p>
+<img src="{{ spectrum_file }}" alt="Spectrum Plot">
+<img src="{{ mfcc_file }}" alt="MFCC Plot">
+<img src="{{ mel_file }}" alt="Mel Spectrogram">
+<br>
+<a href="{{ url_for('index') }}" class="button is-info mt-3">Back</a>
+{% endblock %}
